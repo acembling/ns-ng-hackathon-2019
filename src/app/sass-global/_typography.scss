@@ -1,0 +1,39 @@
+.heading {
+    font-size: $font-size--large;
+}
+
+.subtitle {
+    color: $light-grey;
+}
+
+.font--bold {
+    font-weight: 800;
+}
+.font--semibold {
+    font-weight: 500;
+}
+
+.font--regular {
+    font-weight: 400;
+}
+
+.font--light {
+    font-weight: 300;
+}
+
+.h2 {
+    font-weight: 600;
+    font-size: $font-size--large;
+    margin-bottom: 20;
+}
+
+.h3 {
+    font-weight: 300;
+    font-size: $font-size--medium;
+    margin-bottom: 20;
+}
+
+.p {
+    font-size: $font-size--mid-small;
+    line-height: 4;
+}

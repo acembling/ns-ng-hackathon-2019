@@ -1,0 +1,25 @@
+// Import the theme’s variables. If you’re using a color scheme
+// other than “light”, switch the path to the alternative scheme,
+// for example '~nativescript-theme-core/scss/dark'.
+@import '~nativescript-theme-core/scss/light';
+
+// Colours
+$white: #ffffff;
+$light-grey: #c0c0c0;
+$black: #000000;
+
+$yellow-buff: #f0d78c;
+$yellow-anzac: #e4ab41;
+$blue-sky: #64c4ed;
+$blue-indigo: #4f81c7;
+$white-hint: #fcfafa;
+
+// Sizes
+$font-size--large: 32;
+$font-size--mid-large: 28;
+$font-size--medium: 20;
+$font-size--mid-small: 15;
+$font-size--small: 10;
+
+// Border
+$global-border-radius: 12;
