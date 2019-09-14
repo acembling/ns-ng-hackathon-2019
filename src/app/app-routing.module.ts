@@ -1,21 +1,23 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
-import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { NativeScriptRouterModule, NSEmptyOutletComponent } from "nativescript-angular/router";
 
 // Pages
 import { HomeComponent } from "./pages/home/home.component";
-import { InnerPageComponent } from "./pages/inner-page/inner-page.component";
 import { TabsComponent } from "./pages/tabs/tabs.component";
 import { GoalComponent } from "./pages/goal/goal.component";
+import { MapComponent } from "./pages/map/map.component";
+import { DonateComponent } from "./pages/donate/donate.component";
 
 export const PAGES = [
     HomeComponent,
-    InnerPageComponent,
     TabsComponent,
-    GoalComponent
+    GoalComponent,
+    DonateComponent
 ]
 
 export const COMPONENTS = [
+    MapComponent,
 
 ]
 
@@ -32,6 +34,14 @@ const routes: Routes = [
     {
         path: "home",
         component: HomeComponent,
+    },
+    {
+        path: "tabs/map",
+        component: MapComponent,
+    },
+    {
+        path: "donate",
+        component: DonateComponent,
     },
     {
         path: "goal",
