@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MapboxViewApi, MapboxMarker } from "nativescript-mapbox";
+import { DataItem } from "../../services/data.service";
+import { DataService } from "../../services/data.service";
 
 @Component({
     selector: "app-map",
@@ -10,12 +12,18 @@ import { MapboxViewApi, MapboxMarker } from "nativescript-mapbox";
 export class MapComponent implements OnInit {
 
     private map: MapboxViewApi;
-    isTrue: boolean = false
 
-    constructor() { }
+    elmtreeMarker: MapboxMarker
+    firstMarker: MapboxMarker
+    upperMarker: MapboxMarker
+    rerereMarker: MapboxMarker
+
+    items: Array<DataItem>;
+
+    constructor(private dataService: DataService) { }
 
     ngOnInit(): void {
-        this.isTrue = true
+        this.items = this.dataService.getItems();
     }
 
     onMapReady(args): void {
@@ -26,41 +34,53 @@ export class MapComponent implements OnInit {
     }
 
     markers() {
-        const elmtreeMarker = <MapboxMarker>{
-            id: 2,
-            lat: 51.4,
-            lng: -0.15,
-            title: 'Elmtree Recycling',
-            subtitle: 'Plastic, Metal',
-        };
-        const firstMarker = <MapboxMarker>{
-            id: 2,
+        this.firstMarker = <MapboxMarker>{
+            id: 1,
             lat: 51.45,
             lng: -0.1,
             title: 'First Point Recycling',
             subtitle: 'Glass, Wood, Plastic',
             selected: true,
         };
-        const upperMarker = <MapboxMarker>{
+        this.elmtreeMarker = <MapboxMarker>{
             id: 2,
+            lat: 51.4,
+            lng: -0.15,
+            title: 'Elmtree Recycling',
+            subtitle: 'Plastic, Metal',
+        };
+        this.upperMarker = <MapboxMarker>{
+            id: 3,
             lat: 51.2,
             lng: 0.15,
             title: 'Upper Ridge Point',
             subtitle: 'Plastic',
         };
-        const rerereMarker = <MapboxMarker>{
-            id: 2,
+        this.rerereMarker = <MapboxMarker>{
+            id: 4,
             lat: 51.1,
             lng: 0,
             title: 'Re Re Re Center',
             subtitle: 'Plastic, Wood, Metal',
         };
         this.map.addMarkers([
-            elmtreeMarker,
-            firstMarker,
-            upperMarker,
-            rerereMarker
+            this.elmtreeMarker,
+            this.firstMarker,
+            this.upperMarker,
+            this.rerereMarker
         ])
+    }
+
+    updateMarker(lat: number, lng: number) {
+        if(this.map) {
+            this.map.setCenter(
+                {
+                lat: lat,
+                lng: lng,
+                animated: true
+                }
+            )
+        }
     }
 
 }

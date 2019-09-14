@@ -1,14 +1,14 @@
 <ActionBar class="action-bar--main">
     <Label text="Map" class="heading font--bold action-bar--label"></Label>
 </ActionBar>
-<GridLayout>
+<GridLayout rows="auto" columns="*">
     <ContentView class="map--mapbox" height="100%" width="100%">
         <Mapbox
             accessToken="pk.eyJ1IjoiYWNlbWFuMTgiLCJhIjoiY2swanI0d3c1MGNoeTNucG5uOWt2YW1lNiJ9.jCZ8pZ1oGAUP99GzpE7u4w"
             mapStyle="dark"
-            latitude="51.4"
-            longitude="-0.15"
-            zoomLevel="8"
+            latitude="51.45"
+            longitude="-0.1"
+            zoomLevel="12"
             showUserLocation="false"
             disableZoom="false"
             disableRotation="false"
@@ -17,4 +17,42 @@
             (mapReady)="onMapReady($event)">
         </Mapbox>
     </ContentView>
+
+    <ScrollView orientation="horizontal" scrollBarIndicatorVisible="false" verticalAlignment="bottom" horizontalAlignment="left">
+        <StackLayout orientation="horizontal" *ngIf="items" class="home--carousel">
+            <StackLayout orientation="horizontal" *ngFor="let item of items">
+                <GridLayout rows="auto, auto" columns="*, auto" class="map__marker-tile" (tap)="updateMarker(item.lat, item.lng)">
+                    <Label col="0" text="{{ item.name }}" class="h3 font--semibold map__marker-tile__title" textWrap="true"></Label>
+                    <Label row="1" text="{{ item.description }}" class="p subtitle" textWrap="true"></Label>
+                    <Label col="1" row="0" rowspan="2" text="&#xf276;" class="fa text--center" textWrap="true"></Label>
+                    <Label col="1" row="1" rowspan="2" text="Find" class="p" textWrap="true" marginTop="10"></Label>
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+<!--
+    <ScrollView orientation="horizontal" verticalAlignment="bottom" horizontalAlignment="left">
+        <GridLayout rows="auto, auto" columns="*, auto" class="map__marker-tile" [nsRouterLink]="['/tabs/map']">
+            <Label col="0" text="First Point" class="h3 font--semibold map__marker-tile__title" textWrap="true"></Label>
+            <Label row="1" text="This recycling center contains the capabilities to recycle, glass, wood and plastic. " class="p subtitle" textWrap="true"></Label>
+            <Label col="1" row="0" rowspan="2" text="&#xf054;" class="fa" textWrap="true"></Label>
+        </GridLayout>
+        <GridLayout rows="auto, auto" columns="*, auto" class="map__marker-tile" [nsRouterLink]="['/tabs/map']">
+            <Label col="0" text="Elmtree" class="h3 font--semibold map__marker-tile__title" textWrap="true"></Label>
+            <Label row="1" text="This recycling center contains the capabilities to recycle, glass, wood and plastic. " class="p subtitle" textWrap="true"></Label>
+            <Label col="1" row="0" rowspan="2" text="&#xf054;" class="fa" textWrap="true"></Label>
+        </GridLayout>
+        <GridLayout rows="auto, auto" columns="*, auto" class="map__marker-tile" [nsRouterLink]="['/tabs/map']">
+            <Label col="0" text="Upper Ridge" class="h3 font--semibold map__marker-tile__title" textWrap="true"></Label>
+            <Label row="1" text="This recycling center contains the capabilities to recycle, glass, wood and plastic. " class="p subtitle" textWrap="true"></Label>
+            <Label col="1" row="0" rowspan="2" text="&#xf054;" class="fa" textWrap="true"></Label>
+        </GridLayout>
+        <GridLayout rows="auto, auto" columns="*, auto" class="map__marker-tile" [nsRouterLink]="['/tabs/map']">
+            <Label col="0" text="Re Re Re Center" class="h3 font--semibold map__marker-tile__title" textWrap="true"></Label>
+            <Label row="1" text="This recycling center contains the capabilities to recycle, glass, wood and plastic. " class="p subtitle" textWrap="true"></Label>
+            <Label col="1" row="0" rowspan="2" text="&#xf054;" class="fa" textWrap="true"></Label>
+        </GridLayout>
+    </ScrollView> -->
 </GridLayout>
+
+<!-- They have a great community programs where the recycled materials get turned into pencils and cups for the local community. -->

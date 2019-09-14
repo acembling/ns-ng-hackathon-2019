@@ -1,25 +1,23 @@
-<!-- <ScrollView> -->
-    <GridLayout rows="auto, auto" columns="*">
-        <StackLayout class="donate">
-            <Label class="heading font--bold" text="Donate today" textWrap="true"></Label>
-            <Label class="p subtitle" text="Make a positive change and do your bit today" textWrap="true"></Label>
-            <Label class="text--center home__fact--number">
-                <FormattedString>
-                    <Span text="£" textWrap="true" class="p"></Span>
-                    <Span text="10,000s" class="h1 font--bold" textWrap="true"></Span>
-                </FormattedString>
-            </Label>
-            <Label text="Raised so far by people like you right now. See what is being raised for below" class="p text--semibold text--center" textWrap="true"></Label>
-            <Label text="Donate" textWrap="true" class="donate__button button--main" (tap)="openLink()"></Label>
-        </StackLayout>
-        <StackLayout row="1" class="donate__map">
-                <Label class="heading font--bold text--white" text="Recycling Map" textWrap="true"></Label>
-                <Label class="p subtitle " text="View the map to see locations nearby" textWrap="true"></Label>
-                <GridLayout rows="*, *" columns="auto, *, auto" class="donate__map-link scaleBounce" [nsRouterLink]="['/tabs/map']">
-                    <Image col="0" src="~/app/assets/plastic_bag.png" class="home__plastic--image bobr"></Image>
-                    <Label col="1" text="Find your local recycling center" class="p font--semibold" textWrap="true"></Label>
-                    <Label col="2" row="0" rowspan="2" text="&#xf054;" class="fa" textWrap="true"></Label>
-                </GridLayout>
-            </StackLayout>
-    </GridLayout>
-<!-- </ScrollView> -->
+<GridLayout rows="auto, auto" columns="*">
+    <StackLayout class="donate">
+        <Label class="heading font--bold" text="Donate today" textWrap="true"></Label>
+        <Label class="p subtitle" text="Make a positive change and do your bit today" textWrap="true"></Label>
+        <Label class="text--center home__fact--number">
+            <FormattedString>
+                <Span text="£" textWrap="true" class="p"></Span>
+                <Span text="10,000s" class="h1 font--bold" textWrap="true"></Span>
+            </FormattedString>
+        </Label>
+        <Label text="Raised so far by people like you right now. See what is being raised below" class="p text--semibold text--center" textWrap="true"></Label>
+        <Label text="Donate" textWrap="true" class="donate__button button--main" (tap)="openLink()"></Label>
+    </StackLayout>
+    <StackLayout row="1" class="donate__map">
+        <Label class="heading font--bold text--white" text="Recycling Map" textWrap="true"></Label>
+        <Label class="p subtitle " text="View the map to see locations nearby" textWrap="true"></Label>
+        <GridLayout rows="*, *" columns="auto, *, auto" class="donate__map-link scaleBounce" [nsRouterLink]="['/tabs/map']">
+            <Image col="0" src="~/app/assets/plastic_bag.png" class="home__plastic--image bobr"></Image>
+            <Label col="1" text="Find your local recycling center" class="p font--semibold" textWrap="true"></Label>
+            <Label col="2" row="0" rowspan="2" text="&#xf054;" class="fa" textWrap="true"></Label>
+        </GridLayout>
+    </StackLayout>
+</GridLayout>

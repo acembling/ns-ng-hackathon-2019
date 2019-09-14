@@ -1,0 +1,14 @@
+@import "../../../app-variables";
+
+.map__marker-tile {
+    margin: 20;
+    height: 140;
+    width: 280;
+    background-color: $white;
+    border-radius: $global-border-radius;
+    padding: 20;
+}
+
+.map__marker-tile__title {
+    margin-bottom: 10;
+}
