@@ -7,7 +7,7 @@
             <Label text="Plastic Oceans UK" class="h1 font--bold home__hero--text" textWrap="true"></Label>
         </GridLayout>
         <StackLayout class="bob" horizontalAlignment="left">
-            <Image src="~/app/assets/plastic_bottle.png" class="bottle bobr"></Image>
+            <Image src="~/app/assets/plastic_bottle.png" class="home__plastic--image bobr"></Image>
         </StackLayout>
         <StackLayout class="home__fact">
             <Label class="text--center home__fact--number">
@@ -21,10 +21,10 @@
 
         <StackLayout orientation="horizontal">
             <StackLayout class="bob2" horizontalAlignment="left">
-                <Image src="~/app/assets/plastic_bag.png" class="bottle bobr"></Image>
+                <Image src="~/app/assets/plastic_bag.png" class="home__plastic--image bobr"></Image>
             </StackLayout>
             <StackLayout class="bob3" horizontalAlignment="left">
-                <Image src="~/app/assets/plastic_bag.png" class="bottle bobr2"></Image>
+                <Image src="~/app/assets/plastic_bag.png" class="home__plastic--image bobr2"></Image>
             </StackLayout>
         </StackLayout>
 
@@ -38,10 +38,10 @@
             <Label text="Plastic bags are used worldwide every year" class="p text--semibold text--white text--center" textWrap="true"></Label>
         </StackLayout>
 
-        <StackLayout>
-            <Label text="Track your recycling" class="heading font--bold text--white" textWrap="true"></Label>
-
-            <Label text="Track your recycling" class="heading text--white" textWrap="true"></Label>
-        </StackLayout>
+        <!-- <GridLayout rows="*, *" columns="*, auto" class="home__tracker-section" [nsRouterLink]="['/goal']">
+            <Label text="Track your recycling goals" class="h3 font--semibold" textWrap="true"></Label>
+            <Label row="1" text="Go to tracker to see how you are doing" class="subtitle p" textWrap="true"></Label>
+            <Label col="1" row="0" rowspan="2" text="&#xf054;" class="fa" textWrap="true"></Label>
+        </GridLayout> -->
     </StackLayout>
 </ScrollView>
