@@ -10,16 +10,30 @@ import { Progress } from "tns-core-modules/ui/progress";
 export class GoalComponent implements OnInit {
 
     progressTest: Progress
-    rows;
+    rows
+    percentValue: number = 60
+    isReset: boolean = false
 
     constructor() { }
 
     ngOnInit(): void {
-        this.setProgressbarWidth(35)
+        this.setProgressbarWidth(this.percentValue)
     }
 
     setProgressbarWidth(percent) {
-    this.rows = percent + "*," + (100 - percent) + "*";
+        this.percentValue = percent
+        if(this.percentValue < 110) {
+            this.rows = percent + "*," + (100 - this.percentValue) + "*";
+        }
+        if(this.percentValue == 110) {
+            this.isReset = true
+        }
+    }
+
+    resetTarget() {
+        this.percentValue = 0
+        this.setProgressbarWidth(this.percentValue)
+        this.isReset = false
     }
 
     onProgressBarLoaded(args) {
@@ -30,11 +44,9 @@ export class GoalComponent implements OnInit {
     }
 
     increaseProgress() {
-        let percent = 0;
-        let intervalId = setInterval(() => {
-          this.setProgressbarWidth(percent);
-          percent++;
-        }, 50);
+        let number = this.percentValue
+        number += 10;
+        this.setProgressbarWidth(number)
     }
 
 }

@@ -1,27 +1,25 @@
 <StackLayout class="goal">
 
-        <Label class="h3 font--bold" text="You're getting closer" textWrap="true"></Label>
-        <Label class="p" text="You're getting closer to your target" textWrap="true"></Label>
+    <Label class="heading font--bold" text="Your recycling" textWrap="true"></Label>
+    <Label class="p subtitle " text="Each piece of plastic you recycle will raise your total" textWrap="true"></Label>
 
     <GridLayout rows="*, auto" columns="*, auto, *" class="goal__bar">
-        <!-- <Label col="0" row="0" text="Max" textWrap="true" class="p"></Label> -->
-            <StackLayout class="goal__target">
-                <Label class="h3 goal__target--text" text="100 &mdash;"></Label>
-                <Label class="h3 goal__target--text" text="80 &ndash;"></Label>
-                <Label class="h3 goal__target--text" text="60 &mdash;"></Label>
-                <Label class="h3 goal__target--text" text="40 &ndash;"></Label>
-                <Label class="h3 goal__target--text" text="20 &mdash;"></Label>
-            </StackLayout>
+        <StackLayout class="goal__target">
+            <Label class="h3 goal__target--text" text="100 &mdash;"></Label>
+            <Label class="h3 goal__target--text" text="80 &ndash;"></Label>
+            <Label class="h3 goal__target--text" text="60 &mdash;"></Label>
+            <Label class="h3 goal__target--text" text="40 &ndash;"></Label>
+            <Label class="h3 goal__target--text" text="20 &mdash;"></Label>
+        </StackLayout>
         <StackLayout row="0" col="1" class="goal__progress" verticalAlignment="center">
             <CardView radius="12" elevation="20" shadowOffsetWidth="0" shadowOffsetHeight="0" shadowRadius="8" shadowOpacity=".1" backgroundColor="white">
                 <GridLayout rows="{{ rows }}" class="progressbar">
                     <StackLayout col="0" class="progressbar-value"></StackLayout>
                 </GridLayout>
             </CardView>
-            <!-- <Progress [value]="progressValue" (loaded)="onProgressBarLoaded($event)" maxValue="100" class="progress"></Progress> -->
         </StackLayout>
-        <Label row="1" col="2" class="h2" text="Dolphin"></Label>
-        <Label row="1" col="1" text="Add" (tap)="increaseProgress()" class="goal__add" textWrap="true"></Label>
+        <Label row="1" text="Reset" class="subtitle p" textWrap="true" *ngIf="isReset" (tap)="resetTarget()"></Label>
+        <Label row="1" col="0" colspan="3" text="Add to total" (tap)="increaseProgress()" class="button--main" textWrap="true"></Label>
     </GridLayout>
 
 </StackLayout>

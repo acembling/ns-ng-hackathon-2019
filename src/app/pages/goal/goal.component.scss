@@ -1,28 +1,8 @@
 @import "../../../app-variables";
 
-.progress {
-    // padding: 20;
-}
-
-.progressbar {
-    width: 40;
-    // margin: 10;
-    border-radius: 10;
-    // border-color: $blue-indigo;
-    // border-width: 2;
-    background-color: $white-hint;
-    transform: rotate(180);
-    background: #ECEFF1;
-}
-
-.progressbar-value {
-    background-color: $blue-sky;
-    border-radius: 10;
-    background: linear-gradient(to top, $blue-sky, $white-hint);
-}
-
 .goal {
     padding: 20;
+    // background-color: $black-mine-shaft;
 }
 
 .goal__bar {
@@ -30,10 +10,7 @@
 }
 
 .goal__progress {
-    // padding: 20;
     margin: 20;
-    // background-color: $blue-sky;
-    // color: $white;
 }
 
 .goal__add {
@@ -58,7 +35,21 @@
 }
 
 .goal__target--text {
-    margin-bottom: 13%;
+    margin-bottom: 10%;
     color: $black;
     opacity: .2;
+}
+
+.progressbar {
+    width: 40;
+    border-radius: 10;
+    background-color: $white-hint;
+    transform: rotate(180);
+    background-color: $white-porcelain;
+}
+
+.progressbar-value {
+    background-color: $blue-sky;
+    border-radius: 10;
+    background: linear-gradient(to top, $blue-sky, $white-hint);
 }
