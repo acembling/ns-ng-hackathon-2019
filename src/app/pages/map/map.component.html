@@ -1,0 +1,20 @@
+<ActionBar class="action-bar--main">
+    <Label text="Map" class="heading font--bold action-bar--label"></Label>
+</ActionBar>
+<GridLayout>
+    <ContentView class="map--mapbox" height="100%" width="100%">
+        <Mapbox
+            accessToken="pk.eyJ1IjoiYWNlbWFuMTgiLCJhIjoiY2swanI0d3c1MGNoeTNucG5uOWt2YW1lNiJ9.jCZ8pZ1oGAUP99GzpE7u4w"
+            mapStyle="dark"
+            latitude="51.4"
+            longitude="-0.15"
+            zoomLevel="8"
+            showUserLocation="false"
+            disableZoom="false"
+            disableRotation="false"
+            disableScroll="false"
+            disableTilt="false"
+            (mapReady)="onMapReady($event)">
+        </Mapbox>
+    </ContentView>
+</GridLayout>
