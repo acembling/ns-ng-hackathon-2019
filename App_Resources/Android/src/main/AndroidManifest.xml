@@ -35,5 +35,8 @@
 			</intent-filter>
 		</activity>
 		<activity android:name="com.tns.ErrorReportActivity"/>
+
+		<service android:name="com.mapbox.services.android.telemetry.service.TelemetryService" />
+
 	</application>
 </manifest>

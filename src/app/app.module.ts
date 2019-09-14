@@ -7,6 +7,7 @@ import { AppComponent } from "./app.component";
 import { registerElement } from 'nativescript-angular/element-registry';
 import { CardView } from '@nstudio/nativescript-cardview';
 registerElement('CardView', () => CardView);
+registerElement("Mapbox", () => require("nativescript-mapbox").MapboxView);
 
 @NgModule({
     bootstrap: [

@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { isAndroid } from "tns-core-modules/platform";
+import { init } from 'nativescript-advanced-webview';
+init();
 
 @Component({
     selector: "ns-app",
