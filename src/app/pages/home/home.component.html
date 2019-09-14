@@ -1,8 +1,47 @@
-<ActionBar class="action-bar">
-    <Label class="action-bar-title" text="Home"></Label>
-</ActionBar>
-<StackLayout class="home">
-    <Label text="Hello John" class="h1 font--bold" textWrap="true"></Label>
-    <Label text="Subtitle" class="subtitle" textWrap="true"></Label>
-    <Button text="Go to inner page" [nsRouterLink]="['inner-page']" ></Button>
-</StackLayout>
+<ScrollView>
+    <StackLayout class="home">
+        <GridLayout rows="auto, auto" columns="*" class="home__hero">
+            <StackLayout row="1" class="home__hero--image">
+                <Label text="Experts for a decade in solving the plastic crisis through our science, education and sustainability programmes" class="p subtitle home__hero--text-quote" textWrap="true"></Label>
+            </StackLayout>
+            <Label text="Plastic Oceans UK" class="h1 font--bold home__hero--text" textWrap="true"></Label>
+        </GridLayout>
+        <StackLayout class="bob" horizontalAlignment="left">
+            <Image src="~/app/assets/plastic_bottle.png" class="bottle bobr"></Image>
+        </StackLayout>
+        <StackLayout class="home__fact">
+            <Label class="text--center home__fact--number">
+                <FormattedString>
+                    <Span text="8,000,000,000 " class="h1 font--bold text--white" textWrap="true"></Span>
+                    <Span text="Tons" textWrap="true" class="p text--white"></Span>
+                </FormattedString>
+            </Label>
+            <Label text="Of plastic enter the ocean every day" class="p text--semibold text--white text--center" textWrap="true"></Label>
+        </StackLayout>
+
+        <StackLayout orientation="horizontal">
+            <StackLayout class="bob2" horizontalAlignment="left">
+                <Image src="~/app/assets/plastic_bag.png" class="bottle bobr"></Image>
+            </StackLayout>
+            <StackLayout class="bob3" horizontalAlignment="left">
+                <Image src="~/app/assets/plastic_bag.png" class="bottle bobr2"></Image>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout class="home__fact">
+            <Label class="text--center home__fact--number">
+                <FormattedString>
+                    <Span text="A " textWrap="true" class="p text--white"></Span>
+                    <Span text="Trillion" class="h1 font--bold text--white" textWrap="true"></Span>
+                </FormattedString>
+            </Label>
+            <Label text="Plastic bags are used worldwide every year" class="p text--semibold text--white text--center" textWrap="true"></Label>
+        </StackLayout>
+
+        <StackLayout>
+            <Label text="Track your recycling" class="heading font--bold text--white" textWrap="true"></Label>
+
+            <Label text="Track your recycling" class="heading text--white" textWrap="true"></Label>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

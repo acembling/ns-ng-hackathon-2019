@@ -1,3 +1,43 @@
+@import "../../../app-variables";
+
 .home {
+    background-color: $black-mine-shaft;
+}
+
+.home__hero {
     padding: 20;
+}
+
+.home__hero--image {
+    background-image: url("~/app/assets/plastic-ocean-portrait.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 300 20 20;
+    border-radius: $global-border-radius;
+}
+
+.home__hero--text-quote {
+    margin-top: 120;
+    background-color: $white;
+    border-radius: $global-border-radius;
+    padding: 20;
+}
+
+.home__hero--text {
+    font-size: 45;
+    color: $white;
+    line-height: -10;
+    margin-bottom: -30;
+}
+
+.home__fact {
+    margin: 40 0;
+}
+
+.home__fact--number {
+    margin-bottom: 20;
+}
+
+.bottle {
+    width: 100;
 }
