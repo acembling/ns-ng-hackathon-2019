@@ -1,0 +1,57 @@
+@import "../../../app-variables";
+
+.donate__map {
+    background-color: $black-mine-shaft;
+    padding: 20 20 80;
+}
+
+.donate {
+    padding: 20;
+}
+
+.donate__map-link {
+    margin-top: 20;
+    background-color: $white;
+    border-radius: $global-border-radius;
+    padding: 20 20 20 0;
+}
+
+.donate__button {
+    margin-top: 20;
+}
+
+.home__hero {
+    padding: 20;
+}
+
+.home__hero--text-quote {
+    margin-top: 120;
+    background-color: $white;
+    border-radius: $global-border-radius;
+    padding: 20;
+}
+
+.home__hero--text {
+    font-size: 45;
+    color: $white;
+    line-height: -10;
+    margin-bottom: -30;
+}
+
+.home__fact {
+    margin: 40 0;
+}
+
+.home__fact--number {
+    margin-bottom: 20;
+}
+
+.home__plastic--image {
+    width: 100;
+}
+.home__tracker-section {
+    margin: 20;
+    background-color: $white;
+    border-radius: $global-border-radius;
+    padding: 20;
+}
