@@ -1,0 +1,9 @@
+@import "../../../app-variables";
+
+TabView {
+    tab-text-color: $white;
+    tab-background-color: $black;
+    selected-tab-text-color: $yellow-anzac;
+    android-selected-tab-highlight-color: $blue-sky;
+    font-size: 20;
+}
