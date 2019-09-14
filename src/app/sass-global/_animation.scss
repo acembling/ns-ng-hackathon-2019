@@ -89,28 +89,88 @@
 @keyframes bob {
 
 	0% {
-		transform: translate(0, 0);
+		transform: translate(-100, 0);
 	}
 	20% {
-		transform: translate(40, 50);
+		transform: translate(40, 30);
 	}
 	40% {
-		transform: translate(80, 0);
+		transform: translate(80, -10);
 	}
 	60% {
 		transform: translate(120, 40);
 	}
 	80% {
-		transform: translate(160, 0);
+		transform: translate(200, -30);
 	}
 	100% {
-		transform: translate(200, 50);
+		transform: translate(350, 50);
 	}
 }
 
 .bob {
 	animation-name: bob;
 	animation-duration: 8;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.65,.23,.29,.95);
+	animation-iteration-count: infinite;
+}
+
+@keyframes bob2 {
+
+	0% {
+		transform: translate(-100, 0);
+	}
+	// 20% {
+	// 	transform: translate(40, 0);
+	// }
+	40% {
+		transform: translate(60, -10);
+	}
+	60% {
+		transform: translate(80, 40);
+	}
+	80% {
+		transform: translate(60, -30);
+	}
+	100% {
+		transform: translate(-100, 50);
+	}
+}
+
+.bob2 {
+	animation-name: bob2;
+	animation-duration: 12;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.65,.23,.29,.95);
+	animation-iteration-count: infinite;
+}
+
+@keyframes bob3 {
+
+	0% {
+		transform: translate(250, 0);
+	}
+	20% {
+		transform: translate(140, 20);
+	}
+	40% {
+		transform: translate(120, 40);
+	}
+	// 60% {
+	// 	transform: translate(180, -40);
+	// }
+	80% {
+		transform: translate(200, -10);
+	}
+	100% {
+		transform: translate(300, 50);
+	}
+}
+
+.bob3 {
+	animation-name: bob3;
+	animation-duration: 12;
 	animation-fill-mode: forwards;
 	animation-timing-function: cubic-bezier(.65,.23,.29,.95);
 	animation-iteration-count: infinite;
@@ -140,6 +200,33 @@
 
 .bobr {
 	animation-name: bobr;
+	animation-duration: 8;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.65,.23,.29,.95);
+	animation-iteration-count: infinite;
+}
+
+@keyframes bobr2 {
+
+	0% {
+		transform: rotate(0, 0);
+	}
+	20% {
+		transform: rotate(-30);
+	}
+	60% {
+		transform: rotate(0);
+	}
+	80% {
+		transform: rotate(20);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+.bobr2 {
+	animation-name: bobr2;
 	animation-duration: 8;
 	animation-fill-mode: forwards;
 	animation-timing-function: cubic-bezier(.65,.23,.29,.95);

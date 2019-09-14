@@ -1,39 +1,57 @@
 .heading {
     font-size: $font-size--large;
+    font-family: $font-b;
 }
 
 .subtitle {
     color: $light-grey;
+    font-family: $font-sb;
 }
 
 .font--bold {
     font-weight: 800;
+    font-family: $font-b;
 }
+
 .font--semibold {
     font-weight: 500;
+    font-family: $font-sb;
 }
 
 .font--regular {
     font-weight: 400;
+    font-family: $font-r;
 }
 
 .font--light {
     font-weight: 300;
+    font-family: $font-l;
 }
 
 .h2 {
-    font-weight: 600;
+    // font-weight: 600;
+    font-family: $font-r;
     font-size: $font-size--large;
     margin-bottom: 20;
 }
 
 .h3 {
-    font-weight: 300;
+    // font-weight: 300;
+    font-family: $font-r;
     font-size: $font-size--medium;
     margin-bottom: 20;
 }
 
 .p {
+    font-family: $font-r;
     font-size: $font-size--mid-small;
     line-height: 4;
+}
+
+.text--white {
+    color: $white;
+}
+
+.text--center {
+    text-align: center;
 }

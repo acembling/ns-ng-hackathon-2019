@@ -1,0 +1,15 @@
+.button--main {
+    padding: 15 20;
+    background-color: $yellow-anzac;
+    color: $white;
+    border-radius: $global-border-radius;
+    font-family: $font-r;
+    font-size: $font-size--mid-small;
+    text-align: center;
+    width: 200;
+}
+
+.button--alt {
+    color: $light-grey;
+    font-family: $font-sb;
+}
