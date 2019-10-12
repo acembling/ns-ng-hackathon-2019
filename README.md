@@ -1,11 +1,10 @@
 # Alex Embling Nativescript Angular Hackathon 2019
 My entry for ns-ng-hackathon-2019
 
-Update: This is now the winning app, feel free to donwload the repo and use the code as a learning resource.
-Instructions:
+Update: This is now the winning app, feel free to download the repo and use the code as a learning resource.
 
 ## Install instructions:
-You need the [nativescript](https://docs.nativescript.org/angular/start/quick-setup) environment setup before continuing.
+If it's your first time using Nativescript follow the [official setup instructions](https://docs.nativescript.org/angular/start/quick-setup) before continuing.
 
 Once setup:
 ```
