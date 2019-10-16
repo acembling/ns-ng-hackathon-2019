@@ -21,4 +21,4 @@ tns run android --bundle
 ```
 Feel free to get in touch if you have any questions. You can also check out the theme on my [website](https://appnative.org/).
 
-Check out my [own](https://flutter.dev/get-started/) and the [official hackathon blog post](https://flutter.dev/get-started/).
+Check out my [own blog](https://appnative.org/how-i-made-a-prize-winning-app-with-nativescript/) and the [official hackathon blog post](https://blog.angular.io/hack-for-good-6b500f1946a3).
